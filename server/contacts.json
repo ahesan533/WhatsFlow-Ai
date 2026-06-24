@@ -3,10 +3,11 @@
     "id": 1780746421214,
     "phone": "192342225104933@lid",
     "name": "192342225104933@lid",
-    "lastMessage": "Price",
-    "totalMessages": 18,
+    "lastMessage": "Owner",
+    "totalMessages": 28,
     "createdAt": "2026-06-06T11:47:01.214Z",
-    "lastSeen": "2026-06-16T08:35:00.988Z"
+    "lastSeen": "2026-06-24T05:48:55.650Z",
+    "status": "Customer"
   },
   {
     "id": 1780746456430,
@@ -15,7 +16,8 @@
     "lastMessage": "",
     "totalMessages": 1,
     "createdAt": "2026-06-06T11:47:36.430Z",
-    "lastSeen": "2026-06-06T11:47:36.430Z"
+    "lastSeen": "2026-06-06T11:47:36.430Z",
+    "status": "Follow Up"
   },
   {
     "id": 1780746456472,
@@ -31,9 +33,9 @@
     "phone": "89245595226211@lid",
     "name": "89245595226211@lid",
     "lastMessage": "",
-    "totalMessages": 3,
+    "totalMessages": 4,
     "createdAt": "2026-06-06T11:47:36.481Z",
-    "lastSeen": "2026-06-16T05:47:33.661Z"
+    "lastSeen": "2026-06-24T05:40:55.819Z"
   },
   {
     "id": 1780746456502,
@@ -76,18 +78,18 @@
     "phone": "215070487355453@lid",
     "name": "215070487355453@lid",
     "lastMessage": "",
-    "totalMessages": 2,
+    "totalMessages": 3,
     "createdAt": "2026-06-16T05:47:07.065Z",
-    "lastSeen": "2026-06-16T06:00:00.066Z"
+    "lastSeen": "2026-06-24T05:40:31.901Z"
   },
   {
     "id": 1781588853637,
     "phone": "36065310187762@lid",
     "name": "36065310187762@lid",
     "lastMessage": "",
-    "totalMessages": 1,
+    "totalMessages": 2,
     "createdAt": "2026-06-16T05:47:33.637Z",
-    "lastSeen": "2026-06-16T05:47:33.637Z"
+    "lastSeen": "2026-06-24T05:40:55.805Z"
   },
   {
     "id": 1781596052343,
@@ -111,9 +113,19 @@
     "id": 1782234949296,
     "phone": "175342140571867@lid",
     "name": "175342140571867@lid",
+    "lastMessage": "No issue",
+    "totalMessages": 2,
+    "createdAt": "2026-06-23T17:15:49.296Z",
+    "lastSeen": "2026-06-23T17:58:53.039Z"
+  },
+  {
+    "id": 1782238138605,
+    "phone": "258372918091994@lid",
+    "name": "258372918091994@lid",
     "lastMessage": "",
     "totalMessages": 1,
-    "createdAt": "2026-06-23T17:15:49.296Z",
-    "lastSeen": "2026-06-23T17:15:49.296Z"
+    "status": "New Lead",
+    "createdAt": "2026-06-23T18:08:58.605Z",
+    "lastSeen": "2026-06-23T18:08:58.605Z"
   }
 ]

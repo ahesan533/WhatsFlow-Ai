@@ -45,6 +45,33 @@ function Clients() {
     }
 
   }
+  const updateStatus = async (phone, status) => {
+
+    try {
+
+      await fetch(
+        "http://127.0.0.1:5000/update-status",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            phone,
+            status
+          })
+        }
+      )
+
+      fetchContacts()
+
+    } catch (error) {
+
+      console.log(error)
+
+    }
+
+  }
 
   const filteredContacts = contacts.filter((contact) =>
 
@@ -168,7 +195,24 @@ function Clients() {
               <p className="text-green-400 mt-2">
                 Messages: {contact.totalMessages || 0}
               </p>
-
+              <div className="mt-3">
+                <select
+                  value={contact.status || "New Lead"}
+                  onChange={(e) =>
+                    updateStatus(
+                      contact.phone,
+                      e.target.value
+                    )
+                  }
+                  className="bg-[#0f172a] border border-zinc-700 text-white p-2 rounded-xl"
+                >
+                  <option>New Lead</option>
+                  <option>Interested</option>
+                  <option>Follow Up</option>
+                  <option>Customer</option>
+                  <option>Lost</option>
+                </select>
+              </div>
               <p className="text-zinc-500 mt-2">
                 🕒 Last Seen:
                 {" "}

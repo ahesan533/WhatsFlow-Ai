@@ -123,6 +123,7 @@ client.on("message", async (message) => {
           name: phoneNumber,
           lastMessage: message.body,
           totalMessages: 1,
+          status: "New Lead",
           createdAt: new Date().toISOString(),
           lastSeen: new Date().toISOString()
         })
@@ -132,12 +133,15 @@ client.on("message", async (message) => {
       saveContacts(contacts)
       const followUps = getFollowUps()
       const alreadyExists = followUps.find(
-        (item) => item.phone === phoneNumber && item.sent === false
+        (item) => item.phone === message.from && item.sent === false
       )
+      console.log("MESSAGE FROM:", message.from)
+      console.log("PHONE NUMBER:", phoneNumber)
+      console.log("ALREADY EXISTS:", alreadyExists)
 
       if (!alreadyExists) {
         followUps.push({
-          phone: phoneNumber,
+          phone: message.from,
           createdAt: Date.now(),
           sent: false
         })
@@ -307,6 +311,45 @@ app.get("/contacts", (req, res) => {
     res.json({
       success: true,
       contacts
+    })
+
+  } catch (error) {
+
+    res.json({
+      success: false,
+      error: error.message
+    })
+
+  }
+
+})
+app.post("/update-status", (req, res) => {
+
+  try {
+
+    const { phone, status } = req.body
+
+    const contacts = getContacts()
+
+    const updatedContacts = contacts.map((contact) => {
+
+      if (contact.phone === phone) {
+
+        return {
+          ...contact,
+          status
+        }
+
+      }
+
+      return contact
+
+    })
+
+    saveContacts(updatedContacts)
+
+    res.json({
+      success: true
     })
 
   } catch (error) {
