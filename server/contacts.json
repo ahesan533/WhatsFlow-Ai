@@ -7,7 +7,36 @@
     "totalMessages": 28,
     "createdAt": "2026-06-06T11:47:01.214Z",
     "lastSeen": "2026-06-24T05:48:55.650Z",
-    "status": "Customer"
+    "status": "Interested",
+    "note": "hiiii",
+    "priority": "High",
+    "reminderDate": "2026-06-02",
+    "timeline": [
+      {
+        "action": "Status Changed To Interested",
+        "time": "2026-06-24T07:49:35.237Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-24T07:49:42.651Z"
+      },
+      {
+        "action": "Status Changed To Customer",
+        "time": "2026-06-24T08:08:13.863Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-24T08:08:35.170Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-24T08:09:00.113Z"
+      },
+      {
+        "action": "Status Changed To Interested",
+        "time": "2026-06-24T08:20:11.167Z"
+      }
+    ]
   },
   {
     "id": 1780746456430,
@@ -17,7 +46,7 @@
     "totalMessages": 1,
     "createdAt": "2026-06-06T11:47:36.430Z",
     "lastSeen": "2026-06-06T11:47:36.430Z",
-    "status": "Follow Up"
+    "status": "Lost"
   },
   {
     "id": 1780746456472,
@@ -104,10 +133,10 @@
     "id": 1781596353547,
     "phone": "120363149959528462@newsletter",
     "name": "120363149959528462@newsletter",
-    "lastMessage": "Two stars. One mission. 🌟🏏\n\nRohit Sharma and Shubman Gill are ready to script another opening masterclass. How big will the partnership be? 👀\n\n👍 100+ \n❤️ 150+ \n\nIND 🆚 AFG | 2nd ODI 👉 Tomorrow, 12:30 PM",
-    "totalMessages": 1,
+    "lastMessage": "*2️⃣ Must-win clashes ahead!*\n\nCheer on Team India as they march on, mission Semi-finals! 💙👏🙌🇮🇳\n\nIND 🆚 BAN 👉 THU, 25 JUN, 6 PM",
+    "totalMessages": 2,
     "createdAt": "2026-06-16T07:52:33.547Z",
-    "lastSeen": "2026-06-16T07:52:33.547Z"
+    "lastSeen": "2026-06-24T07:50:05.810Z"
   },
   {
     "id": 1782234949296,
@@ -127,5 +156,50 @@
     "status": "New Lead",
     "createdAt": "2026-06-23T18:08:58.605Z",
     "lastSeen": "2026-06-23T18:08:58.605Z"
+  },
+  {
+    "id": 1782285150846,
+    "phone": "120363182905476999@newsletter",
+    "name": "120363182905476999@newsletter",
+    "lastMessage": "⏰ *Reminder: The IDFC FIRST Bank MBA Scholarship Webinar starts today at 4:00 PM!*\n\nDon't miss this opportunity to learn everything about the scholarship, including eligibility, application process, required documents, and selection criteria.\n\n🎓 If you're a first-year MBA student and looking for financial support, this session is for you.\n\n*Webinar Details:*\n📅 Today | 24 June 2026\n⏰ 4:00 PM onwards\n💻 Zoom\n\n🔗 *Join Now:*\nhttps://us06web.zoom.us/j/86279244862?pwd=Zczvsdv3ZX61HdeJpIhXt84fTyTEUi.1\n\nSee you there!",
+    "totalMessages": 1,
+    "status": "New Lead",
+    "note": "",
+    "priority": "Normal",
+    "reminderDate": "",
+    "createdAt": "2026-06-24T07:12:30.846Z",
+    "lastSeen": "2026-06-24T07:12:30.846Z"
+  },
+  {
+    "id": 1782285155985,
+    "phone": "120363164587577661@newsletter",
+    "name": "120363164587577661@newsletter",
+    "lastMessage": "⏰ *Reminder: The IDFC FIRST Bank MBA Scholarship Webinar starts today at 4:00 PM!*\n\nDon't miss this opportunity to learn everything about the scholarship, including eligibility, application process, required documents, and selection criteria.\n\n🎓 If you're a first-year MBA student and looking for financial support, this session is for you.\n\n*Webinar Details:*\n📅 Today | 24 June 2026\n⏰ 4:00 PM onwards\n💻 Zoom\n\n🔗 *Join Now:*\nhttps://us06web.zoom.us/j/86279244862?pwd=Zczvsdv3ZX61HdeJpIhXt84fTyTEUi.1\n\nSee you there!",
+    "totalMessages": 1,
+    "status": "New Lead",
+    "note": "",
+    "priority": "Normal",
+    "reminderDate": "",
+    "createdAt": "2026-06-24T07:12:35.985Z",
+    "lastSeen": "2026-06-24T07:12:35.985Z"
+  },
+  {
+    "id": 1782288258318,
+    "phone": "120363184840886453@newsletter",
+    "name": "120363184840886453@newsletter",
+    "lastMessage": "She struck at close to 1️⃣5️⃣0️⃣ with the bat. 💥\nShe bowled and ended with 2️⃣/9️⃣. 🤩\nShe stitched a valuable 1️⃣0️⃣0️⃣-run stand with Voll. ⚡️\nShe took home Player of the Match Award. 😮‍💨🔥\n\nIn-short, Ellyse Perry just did Ellyse Perry things last evening. 💪",
+    "totalMessages": 1,
+    "status": "New Lead",
+    "timeline": [
+      {
+        "action": "Lead Created",
+        "time": "2026-06-24T08:04:18.318Z"
+      }
+    ],
+    "note": "",
+    "priority": "Normal",
+    "reminderDate": "",
+    "createdAt": "2026-06-24T08:04:18.320Z",
+    "lastSeen": "2026-06-24T08:04:18.320Z"
   }
 ]

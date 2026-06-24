@@ -124,8 +124,18 @@ client.on("message", async (message) => {
           lastMessage: message.body,
           totalMessages: 1,
           status: "New Lead",
+          timeline: [
+            {
+              action: "Lead Created",
+              time: new Date().toISOString()
+            }
+          ],
+          note: "",
+          priority: "Normal",
+          reminderDate: "",
           createdAt: new Date().toISOString(),
           lastSeen: new Date().toISOString()
+
         })
 
       }
@@ -307,10 +317,27 @@ app.get("/contacts", (req, res) => {
   try {
 
     const contacts = getContacts()
+    const scoredContacts = contacts.map((contact) => {
+
+  let score = "Cold"
+
+  if ((contact.totalMessages || 0) >= 20) {
+    score = "Hot"
+  }
+  else if ((contact.totalMessages || 0) >= 5) {
+    score = "Warm"
+  }
+
+  return {
+    ...contact,
+    score
+  }
+
+})
 
     res.json({
       success: true,
-      contacts
+      contacts:scoredContacts
     })
 
   } catch (error) {
@@ -337,9 +364,72 @@ app.post("/update-status", (req, res) => {
 
         return {
           ...contact,
-          status
+          status,
+
+          timeline: [
+            ...(contact.timeline || []),
+
+            {
+              action: `Status Changed To ${status}`,
+              time: new Date().toISOString()
+            }
+          ]
         }
 
+      }
+
+      return contact
+
+    })
+
+    saveContacts(updatedContacts)
+
+    res.json({
+      success: true
+    })
+
+  } catch (error) {
+
+    res.json({
+      success: false,
+      error: error.message
+    })
+
+  }
+
+})
+app.post("/update-note", (req, res) => {
+
+  try {
+
+    const {
+      phone,
+      note,
+      priority,
+      reminderDate
+    } = req.body
+
+    const contacts = getContacts()
+
+    const updatedContacts = contacts.map((contact) => {
+
+      if (contact.phone === phone) {
+
+        return {
+          ...contact,
+          note,
+          priority,
+          reminderDate,
+
+          timeline: [
+            ...(contact.timeline || []),
+
+            {
+              action: "Note Added",
+              time: new Date().toISOString()
+            }
+          ]
+        }
       }
 
       return contact

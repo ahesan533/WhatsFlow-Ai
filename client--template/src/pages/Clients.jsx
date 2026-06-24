@@ -5,6 +5,20 @@ function Clients() {
   const [contacts, setContacts] = useState([])
   const [search, setSearch] = useState("")
   const [totalMessages, setTotalMessages] = useState(0)
+  const interestedLeads =
+    contacts.filter(
+      (c) => c.status === "Interested"
+    ).length
+
+  const customers =
+    contacts.filter(
+      (c) => c.status === "Customer"
+    ).length
+
+  const conversionRate =
+    contacts.length > 0
+      ? ((customers / contacts.length) * 100).toFixed(1)
+      : 0
 
   useEffect(() => {
 
@@ -72,6 +86,46 @@ function Clients() {
     }
 
   }
+  const updateNote = async (
+    phone,
+    note,
+    priority,
+    reminderDate
+  ) => {
+    console.log(
+      phone,
+      note,
+      priority,
+      reminderDate
+    )
+
+    try {
+
+      await fetch(
+        "http://127.0.0.1:5000/update-note",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            phone,
+            note,
+            priority,
+            reminderDate
+          })
+        }
+      )
+
+      fetchContacts()
+
+    } catch (error) {
+
+      console.log(error)
+
+    }
+
+  }
 
   const filteredContacts = contacts.filter((contact) =>
 
@@ -121,31 +175,30 @@ function Clients() {
 
         <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
           <h2 className="text-zinc-400">
-            Total Messages
+            Conversion Rate
           </h2>
 
           <p className="text-4xl text-pink-400 font-bold mt-2">
-            {totalMessages}
+            {conversionRate}%
           </p>
         </div>
 
         <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
           <h2 className="text-zinc-400">
-            Active Leads
+             Interested Leads
           </h2>
-
           <p className="text-4xl text-green-400 font-bold mt-2">
-            {contacts.length}
+            {interestedLeads}
           </p>
         </div>
 
         <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
           <h2 className="text-zinc-400">
-            Today's Leads
+            customers
           </h2>
 
           <p className="text-4xl text-yellow-400 font-bold mt-2">
-            {contacts.length}
+            {customers}
           </p>
         </div>
 
@@ -195,6 +248,9 @@ function Clients() {
               <p className="text-green-400 mt-2">
                 Messages: {contact.totalMessages || 0}
               </p>
+              <p className="text-orange-400 mt-2">
+                🔥 Score: {contact.score}
+              </p>
               <div className="mt-3">
                 <select
                   value={contact.status || "New Lead"}
@@ -213,6 +269,51 @@ function Clients() {
                   <option>Lost</option>
                 </select>
               </div>
+              <textarea
+                placeholder="Add Note..."
+                defaultvalue={contact.note || ""}
+                onChange={(e) =>
+                  contact.note = e.target.value
+                }
+                className="w-full mt-3 p-3 rounded-xl bg-[#0f172a] border border-zinc-700 text-white"
+              />
+
+              <select
+                defaultvalue={contact.priority || "Normal"}
+                onChange={(e) =>
+                  contact.priority = e.target.value
+                }
+                className="w-full mt-3 p-3 rounded-xl bg-[#0f172a] border border-zinc-700 text-white"
+              >
+                <option>Low</option>
+                <option>Normal</option>
+                <option>High</option>
+              </select>
+
+              <input
+                type="date"
+                value={contact.reminderDate || ""}
+                onChange={(e) =>
+                  contact.reminderDate = e.target.value
+                }
+                className="w-full mt-3 p-3 rounded-xl bg-[#0f172a] border border-zinc-700 text-white"
+              />
+              <button
+                onClick={() => {
+
+                  updateNote(
+                    contact.phone,
+                    contact.note || "",
+                    contact.priority || "Normal",
+                    contact.reminderDate || ""
+                  )
+                }}
+
+                className="mt-3 bg-cyan-500 text-black px-4 py-2 rounded-xl font-bold"
+              >
+                Save Note
+              </button>
+
               <p className="text-zinc-500 mt-2">
                 🕒 Last Seen:
                 {" "}

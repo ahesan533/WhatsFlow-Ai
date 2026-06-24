@@ -153,5 +153,25 @@
     "phone": "192342225104933@lid",
     "createdAt": 1782280111155,
     "sent": true
+  },
+  {
+    "phone": "120363182905476999@newsletter",
+    "createdAt": 1782285150852,
+    "sent": true
+  },
+  {
+    "phone": "120363164587577661@newsletter",
+    "createdAt": 1782285155988,
+    "sent": true
+  },
+  {
+    "phone": "120363149959528462@newsletter",
+    "createdAt": 1782287405814,
+    "sent": true
+  },
+  {
+    "phone": "120363184840886453@newsletter",
+    "createdAt": 1782288258327,
+    "sent": true
   }
 ]
