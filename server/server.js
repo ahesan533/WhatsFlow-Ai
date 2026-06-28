@@ -399,7 +399,7 @@ app.post("/update-status", (req, res) => {
 
 })
 app.post("/update-note", (req, res) => {
-
+console.log("UPDATE NOTE BODY:",req.body)
   try {
 
     const {
@@ -496,6 +496,82 @@ app.post("/update-business", (req, res) => {
     })
 
   }
+
+})
+app.post("/mark-reminder-done", (req, res) => {
+
+  const { phone } = req.body
+
+  const contacts = getContacts()
+
+  const updated = contacts.map(contact => {
+
+    if (contact.phone === phone) {
+
+      return {
+        ...contact,
+        reminderDate: "",
+
+        timeline: [
+          ...(contact.timeline || []),
+          {
+            action: "Reminder Completed",
+            time: new Date().toISOString()
+          }
+        ]
+      }
+
+    }
+
+    return contact
+
+  })
+
+  saveContacts(updated)
+
+  res.json({ success: true })
+
+})
+
+
+app.post("/snooze-reminder", (req, res) => {
+
+  const { phone } = req.body
+
+  const contacts = getContacts()
+
+  const tomorrow = new Date()
+  tomorrow.setDate(tomorrow.getDate() + 1)
+
+  const date =
+    tomorrow.toISOString().split("T")[0]
+
+  const updated = contacts.map(contact => {
+
+    if (contact.phone === phone) {
+
+      return {
+        ...contact,
+        reminderDate: date,
+
+        timeline: [
+          ...(contact.timeline || []),
+          {
+            action: "Reminder Snoozed",
+            time: new Date().toISOString()
+          }
+        ]
+      }
+
+    }
+
+    return contact
+
+  })
+
+  saveContacts(updated)
+
+  res.json({ success: true })
 
 })
 

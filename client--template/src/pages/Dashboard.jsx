@@ -4,48 +4,9 @@ import BulkCampaign from "../components/BulkCampaign"
 import WhatsAppConnect from "../components/WhatsAppConnect"
 
 function Dashboard() {
-
-  const [loading, setLoading] = useState(false)
   const [contacts, setContacts] = useState([])
   const [contactsLoading, setContactsLoading] = useState(true)
 
-  const sendMessage = async () => {
-
-    setLoading(true)
-
-    try {
-
-      const response = await fetch("http://127.0.0.1:5000/send-message", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          number: "918970195385",
-          message: "🚀 Hello from WhatsFlow AI",
-        }),
-      })
-
-      const data = await response.json()
-
-      if (data.success) {
-        alert("✅ WhatsApp Message Sent Successfully")
-      } else {
-        alert("❌ Failed To Send Message")
-      }
-
-    } catch (error) {
-
-      console.log(error)
-      alert("⚠️ Server Error")
-
-    } finally {
-
-      setLoading(false)
-
-    }
-
-  }
 
   const fetchContacts = async () => {
 
@@ -93,7 +54,7 @@ function Dashboard() {
         <div>
 
           <h1 className="text-5xl font-black tracking-wide">
-            WhatsFlow AI
+            🚀 WhatsFlow AI
           </h1>
 
           <p className="text-zinc-400 mt-3 text-lg">
@@ -104,20 +65,7 @@ function Dashboard() {
 
         <div className="flex items-center gap-4">
 
-          <button
-            onClick={sendMessage}
-            disabled={loading}
-            className={`px-7 py-4 rounded-2xl font-bold text-lg transition-all duration-300
-            ${
-              loading
-                ? "bg-zinc-700 cursor-not-allowed"
-                : "bg-green-500 hover:bg-green-400 hover:scale-105 text-black shadow-[0_0_30px_rgba(34,197,94,0.6)]"
-            }`}
-          >
 
-            {loading ? "Sending..." : "Send WhatsApp Message"}
-
-          </button>
 
           <WhatsAppConnect />
 
@@ -149,16 +97,22 @@ function Dashboard() {
 
         {contactsLoading ? (
 
-          <div className="text-zinc-400">
+          <div className="text-center py-10 text-zinc-400">
             Loading Contacts...
           </div>
-
         ) : contacts.length === 0 ? (
 
-          <div className="text-zinc-400">
-            No Contacts Yet
-          </div>
+          <div className="text-center py-10">
 
+            <h3 className="text-2xl font-bold text-white">
+              📭 No Contacts Yet
+            </h3>
+
+            <p className="text-zinc-400 mt-2">
+              Connect WhatsApp to start collecting leads
+            </p>
+
+          </div>
         ) : (
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">

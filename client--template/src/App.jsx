@@ -7,6 +7,8 @@ import Analytics from "./pages/Analytics"
 import Clients from "./pages/Clients"
 import AIReplies from "./pages/AIReplies"
 import BusinessSettings from "./pages/BusinessSettings"
+import Reminders from "./pages/Reminders"
+import Timeline from "./pages/Timeline"
 
 function App() {
 
@@ -51,6 +53,16 @@ function App() {
             path="/business-settings"
             element={<BusinessSettings />}
           />
+
+          <Route
+            path="/reminders"
+            element={<Reminders />}
+          />
+          <Route
+            path="/timeline"
+            element={<Timeline />}
+          />
+          
 
         </Routes>
 

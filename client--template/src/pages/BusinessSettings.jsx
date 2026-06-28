@@ -53,7 +53,7 @@ function BusinessSettings() {
       const data = await response.json()
 
       if (data.success) {
-        alert("Business Saved Successfully 🚀")
+        alert("Business Saved Successfully")
       }
 
     } catch (error) {
@@ -69,14 +69,14 @@ function BusinessSettings() {
     <div>
 
       <h1 className="text-5xl font-bold">
-        Business Settings ⚙️
+        Business Settings
       </h1>
 
       <p className="text-zinc-400 mt-2">
-        Manage your business information
+        Manage business details used by WhatsFlow AI replies and automation
       </p>
 
-      <div className="mt-10 space-y-5">
+      <div className="mt-10 space-y-5 bg-[#121A2B] p-8 rounded-3xl border border-zinc-800">
 
         <input
           type="text"
@@ -113,7 +113,7 @@ function BusinessSettings() {
               timing: e.target.value
             })
           }
-          placeholder="Timing"
+          placeholder="Business Timing"
           className="w-full p-4 rounded-2xl bg-[#111827] border border-zinc-800 text-white"
         />
 
@@ -126,15 +126,15 @@ function BusinessSettings() {
               owner: e.target.value
             })
           }
-          placeholder="Owner"
+          placeholder="Owner Name"
           className="w-full p-4 rounded-2xl bg-[#111827] border border-zinc-800 text-white"
         />
 
         <button
           onClick={saveBusiness}
-          className="bg-green-500 text-black px-6 py-3 rounded-2xl font-bold hover:bg-green-400 transition-all"
+          className="w-full bg-green-500 text-black py-4 rounded-2xl font-bold hover:bg-green-400 transition-all"
         >
-          Save Settings 🚀
+          Save Settings
         </button>
 
       </div>
@@ -142,6 +142,7 @@ function BusinessSettings() {
     </div>
 
   )
+
 }
 
 export default BusinessSettings

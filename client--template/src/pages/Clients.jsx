@@ -4,12 +4,15 @@ function Clients() {
 
   const [contacts, setContacts] = useState([])
   const [search, setSearch] = useState("")
+  const [activeFilter, setActiveFilter] = useState("All")
   const [totalMessages, setTotalMessages] = useState(0)
-  const interestedLeads =
-    contacts.filter(
-      (c) => c.status === "Interested"
-    ).length
+  const[editingNotes,setEditingNotes1]=useState({})
 
+   const interestedLeads =
+  contacts.filter(
+    (c) => c.status === "Interested"
+  ).length
+  
   const customers =
     contacts.filter(
       (c) => c.status === "Customer"
@@ -24,13 +27,8 @@ function Clients() {
 
     fetchContacts()
 
-    const interval = setInterval(() => {
-      fetchContacts()
-    }, 10000)
-
-    return () => clearInterval(interval)
-
-  }, [])
+  },[])
+    
 
   const fetchContacts = async () => {
 
@@ -126,14 +124,31 @@ function Clients() {
     }
 
   }
+  const filteredContacts = contacts.filter((contact) => {
 
-  const filteredContacts = contacts.filter((contact) =>
+    const matchesSearch =
+      contact.phone?.toLowerCase().includes(search.toLowerCase())
 
-    contact.phone
-      ?.toLowerCase()
-      .includes(search.toLowerCase())
+    if (!matchesSearch) return false
 
-  )
+    if (activeFilter === "Hot")
+      return contact.score === "Hot"
+
+    if (activeFilter === "Warm")
+      return contact.score === "Warm"
+
+    if (activeFilter === "Cold")
+      return contact.score === "Cold"
+
+    if (activeFilter === "Interested")
+      return contact.status === "Interested"
+
+    if (activeFilter === "Customers")
+      return contact.status === "Customer"
+
+    return true
+
+  })
 
   return (
 
@@ -144,7 +159,7 @@ function Clients() {
         <div>
 
           <h1 className="text-5xl font-bold">
-            Clients 👥
+            Clients
           </h1>
 
           <p className="text-zinc-400 mt-2">
@@ -153,17 +168,14 @@ function Clients() {
 
         </div>
 
-        <div className="bg-green-500 text-black px-5 py-3 rounded-2xl font-bold">
-          Total Contacts: {contacts.length}
-        </div>
 
       </div>
 
       {/* Analytics Cards */}
 
-      <div className="grid grid-cols-4 gap-4 mt-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
 
-        <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
+        <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800 min-h-[120px]">
           <h2 className="text-zinc-400">
             Total Contacts
           </h2>
@@ -173,7 +185,7 @@ function Clients() {
           </p>
         </div>
 
-        <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
+        <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800 ">
           <h2 className="text-zinc-400">
             Conversion Rate
           </h2>
@@ -185,16 +197,15 @@ function Clients() {
 
         <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
           <h2 className="text-zinc-400">
-             Interested Leads
+            Interested Leads
           </h2>
           <p className="text-4xl text-green-400 font-bold mt-2">
             {interestedLeads}
           </p>
         </div>
-
         <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
           <h2 className="text-zinc-400">
-            customers
+            Customers
           </h2>
 
           <p className="text-4xl text-yellow-400 font-bold mt-2">
@@ -202,15 +213,69 @@ function Clients() {
           </p>
         </div>
 
+        <div className="bg-[#111827] p-5 rounded-2xl border border-zinc-800">
+          <h2 className="text-zinc-400">
+            Total Messages
+          </h2>
+
+          <p className="text-4xl text-cyan-400 font-bold mt-2">
+            {totalMessages}
+          </p>
+        </div>
       </div>
 
       <input
         type="text"
-        placeholder="🔍 Search phone number..."
+        placeholder="Search clients by phone number..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         className="w-full mt-8 p-4 rounded-2xl bg-[#111827] border border-zinc-800 text-white outline-none"
       />
+      <div className="flex flex-wrap gap-3 mt-4">
+
+        <button
+          onClick={() => setActiveFilter("All")}
+          className="bg-zinc-800 px-4 py-2 rounded-xl"
+        >
+          All
+        </button>
+
+        <button
+          onClick={() => setActiveFilter("Hot")}
+          className="bg-red-500 text-black px-4 py-2 rounded-xl font-bold"
+        >
+          🔥 Hot
+        </button>
+
+        <button
+          onClick={() => setActiveFilter("Warm")}
+          className="bg-yellow-500 text-black px-4 py-2 rounded-xl font-bold"
+        >
+          🟡 Warm
+        </button>
+
+        <button
+          onClick={() => setActiveFilter("Cold")}
+          className="bg-blue-500 text-white px-4 py-2 rounded-xl font-bold"
+        >
+          ❄️ Cold
+        </button>
+
+        <button
+          onClick={() => setActiveFilter("Interested")}
+          className="bg-green-500 text-black px-4 py-2 rounded-xl font-bold"
+        >
+          Interested
+        </button>
+
+        <button
+          onClick={() => setActiveFilter("Customers")}
+          className="bg-purple-500 text-white px-4 py-2 rounded-xl font-bold"
+        >
+          Customers
+        </button>
+
+      </div>
 
       <div className="mt-8 space-y-5">
 
@@ -271,35 +336,99 @@ function Clients() {
               </div>
               <textarea
                 placeholder="Add Note..."
-                defaultvalue={contact.note || ""}
-                onChange={(e) =>
-                  contact.note = e.target.value
-                }
+                value={contact.note || ""}
+                
+                onChange={(e) => {
+
+                  setContacts(
+                    contacts.map((c) => {
+
+                      if (c.phone === contact.phone) {
+                        return {
+                          ...c,
+                          note: e.target.value
+                        }
+                      }
+
+                      return c
+
+                    })
+                  )
+
+                }}
                 className="w-full mt-3 p-3 rounded-xl bg-[#0f172a] border border-zinc-700 text-white"
               />
-
               <select
-                defaultvalue={contact.priority || "Normal"}
-                onChange={(e) =>
-                  contact.priority = e.target.value
-                }
+                value={contact.priority || "Normal"}
+                onChange={(e) => {
+
+                  setContacts(
+                    contacts.map((c) => {
+
+                      if (c.phone === contact.phone) {
+                        return {
+                          ...c,
+                          priority: e.target.value
+                        }
+                      }
+
+                      return c
+
+                    })
+                  )
+
+                  console.log("NEW PRIORITY:", e.target.value)
+
+                }}
+
                 className="w-full mt-3 p-3 rounded-xl bg-[#0f172a] border border-zinc-700 text-white"
               >
-                <option>Low</option>
-                <option>Normal</option>
-                <option>High</option>
-              </select>
 
+                <option value="Low">
+                  Low
+                </option>
+
+                <option value="Normal">
+                  Normal
+                </option>
+
+                <option value="High">
+                  High
+                </option>
+
+              </select>
               <input
                 type="date"
                 value={contact.reminderDate || ""}
-                onChange={(e) =>
-                  contact.reminderDate = e.target.value
-                }
+                onChange={(e) => {
+
+                  setContacts(
+                    contacts.map((c) => {
+
+                      if (c.phone === contact.phone) {
+                        return {
+                          ...c,
+                          reminderDate: e.target.value
+                        }
+                      }
+
+                      return c
+
+                    })
+                  )
+
+                }}
                 className="w-full mt-3 p-3 rounded-xl bg-[#0f172a] border border-zinc-700 text-white"
               />
               <button
                 onClick={() => {
+
+                  console.log(
+                    "SAVING:",
+                    contact.note,
+                    contact.priority,
+                    contact.reminderDate
+                  )
 
                   updateNote(
                     contact.phone,
@@ -307,12 +436,15 @@ function Clients() {
                     contact.priority || "Normal",
                     contact.reminderDate || ""
                   )
-                }}
 
-                className="mt-3 bg-cyan-500 text-black px-4 py-2 rounded-xl font-bold"
+                }}
+                className="mt-4 w-full bg-green-500 text-black p-3 rounded-xl font-bold hover:bg-green-400 transition-all"
               >
                 Save Note
               </button>
+
+
+
 
               <p className="text-zinc-500 mt-2">
                 🕒 Last Seen:

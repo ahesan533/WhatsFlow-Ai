@@ -1,36 +1,95 @@
-2026/06/24-13:33:43.820 2c90 Reusing MANIFEST C:\Users\Ahesan\Desktop\WhatsFlowAI\server\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/06/24-13:33:43.821 2c90 Recovering log #5067
-2026/06/24-13:33:43.860 2c90 Reusing old log C:\Users\Ahesan\Desktop\WhatsFlowAI\server\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/005067.log 
-2026/06/24-13:34:07.026 31a4 Level-0 table #5089: started
-2026/06/24-13:34:07.095 31a4 Level-0 table #5089: 1200602 bytes OK
-2026/06/24-13:34:07.099 31a4 Delete type=0 #5067
-2026/06/24-13:34:07.487 604 Compacting 1@0 + 0@1 files
-2026/06/24-13:34:07.543 604 Generated table #5090@0: 19950 keys, 650136 bytes
-2026/06/24-13:34:07.565 604 Generated table #5091@0: 77 keys, 3738 bytes
-2026/06/24-13:34:07.566 604 Compacted 1@0 + 0@1 files => 653874 bytes
-2026/06/24-13:34:07.567 604 compacted to: files[ 0 2 15 0 0 0 0 ]
-2026/06/24-13:34:07.568 604 Delete type=2 #5089
-2026/06/24-13:34:07.749 604 Compacting 1@1 + 10@2 files
-2026/06/24-13:34:07.899 604 Generated table #5092@1: 47152 keys, 2214858 bytes
-2026/06/24-13:34:08.068 604 Generated table #5093@1: 54337 keys, 2211763 bytes
-2026/06/24-13:34:08.238 604 Generated table #5094@1: 44719 keys, 2212779 bytes
-2026/06/24-13:34:08.298 604 Generated table #5095@1: 959 keys, 2142567 bytes
-2026/06/24-13:34:08.416 604 Generated table #5096@1: 1518 keys, 2145603 bytes
-2026/06/24-13:34:08.485 604 Generated table #5097@1: 1665 keys, 2149137 bytes
-2026/06/24-13:34:08.544 604 Generated table #5098@1: 1168 keys, 2135388 bytes
-2026/06/24-13:34:08.669 604 Generated table #5099@1: 10839 keys, 2173622 bytes
-2026/06/24-13:34:08.836 604 Generated table #5100@1: 23604 keys, 2273118 bytes
-2026/06/24-13:34:08.963 604 Generated table #5101@1: 24065 keys, 2155408 bytes
-2026/06/24-13:34:08.963 604 Compacted 1@1 + 10@2 files => 21814243 bytes
-2026/06/24-13:34:08.964 604 compacted to: files[ 0 1 15 0 0 0 0 ]
-2026/06/24-13:34:08.965 604 Delete type=2 #5071
-2026/06/24-13:34:08.965 604 Delete type=2 #5072
-2026/06/24-13:34:08.965 604 Delete type=2 #5073
-2026/06/24-13:34:08.965 604 Delete type=2 #5074
-2026/06/24-13:34:08.965 604 Delete type=2 #5075
-2026/06/24-13:34:08.966 604 Delete type=2 #5076
-2026/06/24-13:34:08.966 604 Delete type=2 #5077
-2026/06/24-13:34:08.966 604 Delete type=2 #5078
-2026/06/24-13:34:08.966 604 Delete type=2 #5079
-2026/06/24-13:34:08.966 604 Delete type=2 #5080
-2026/06/24-13:34:08.967 604 Delete type=2 #5090
+2026/06/26-12:48:42.667 6ac Reusing MANIFEST C:\Users\Ahesan\Desktop\WhatsFlowAI\server\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/06/26-12:48:42.697 6ac Recovering log #8106
+2026/06/26-12:48:42.700 6ac Reusing old log C:\Users\Ahesan\Desktop\WhatsFlowAI\server\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/008106.log 
+2026/06/26-12:48:46.314 6ac Compacting 1@1 + 10@2 files
+2026/06/26-12:48:46.408 6ac Generated table #8122@1: 10317 keys, 2169045 bytes
+2026/06/26-12:48:46.583 6ac Generated table #8123@1: 25061 keys, 2275328 bytes
+2026/06/26-12:48:46.747 6ac Generated table #8124@1: 26779 keys, 2209380 bytes
+2026/06/26-12:48:46.813 6ac Generated table #8125@1: 6745 keys, 2139638 bytes
+2026/06/26-12:48:46.859 6ac Generated table #8126@1: 2613 keys, 2118440 bytes
+2026/06/26-12:48:46.955 6ac Generated table #8127@1: 7932 keys, 2147942 bytes
+2026/06/26-12:48:47.107 6ac Generated table #8128@1: 48887 keys, 2181718 bytes
+2026/06/26-12:48:47.348 6ac Generated table #8129@1: 101425 keys, 2251822 bytes
+2026/06/26-12:48:47.604 6ac Generated table #8130@1: 101528 keys, 2252254 bytes
+2026/06/26-12:48:47.809 6ac Generated table #8131@1: 72161 keys, 2220425 bytes
+2026/06/26-12:48:47.841 6ac Generated table #8132@1: 193 keys, 3541 bytes
+2026/06/26-12:48:47.842 6ac Compacted 1@1 + 10@2 files => 21969533 bytes
+2026/06/26-12:48:47.843 6ac compacted to: files[ 0 1 28 0 0 0 0 ]
+2026/06/26-12:48:47.844 6ac Delete type=2 #8084
+2026/06/26-12:48:47.844 6ac Delete type=2 #8085
+2026/06/26-12:48:47.844 6ac Delete type=2 #8086
+2026/06/26-12:48:47.845 6ac Delete type=2 #8087
+2026/06/26-12:48:47.845 6ac Delete type=2 #8088
+2026/06/26-12:48:47.845 6ac Delete type=2 #8089
+2026/06/26-12:48:47.845 6ac Delete type=2 #8090
+2026/06/26-12:48:47.845 6ac Delete type=2 #8091
+2026/06/26-12:48:47.845 6ac Delete type=2 #8092
+2026/06/26-12:48:47.845 6ac Delete type=2 #8093
+2026/06/26-12:48:47.845 6ac Delete type=2 #8109
+2026/06/26-12:49:25.652 6ac Level-0 table #8134: started
+2026/06/26-12:49:25.695 6ac Level-0 table #8134: 1092524 bytes OK
+2026/06/26-12:49:25.698 6ac Delete type=0 #8106
+2026/06/26-12:49:45.836 6ac Compacting 1@0 + 1@1 files
+2026/06/26-12:49:45.898 6ac Generated table #8135@0: 16685 keys, 294897 bytes
+2026/06/26-12:49:45.917 6ac Generated table #8136@0: 2491 keys, 170494 bytes
+2026/06/26-12:49:45.925 6ac Generated table #8137@0: 51 keys, 9003 bytes
+2026/06/26-12:49:45.925 6ac Compacted 1@0 + 1@1 files => 474394 bytes
+2026/06/26-12:49:45.926 6ac compacted to: files[ 0 3 28 0 0 0 0 ]
+2026/06/26-12:49:46.919 6ac Compacting 1@1 + 9@2 files
+2026/06/26-12:49:47.129 6ac Generated table #8138@1: 85028 keys, 2268191 bytes
+2026/06/26-12:49:47.288 6ac Generated table #8139@1: 27021 keys, 2189946 bytes
+2026/06/26-12:49:47.531 6ac Generated table #8140@1: 63745 keys, 2226999 bytes
+2026/06/26-12:49:47.786 6ac Generated table #8141@1: 63469 keys, 2230937 bytes
+2026/06/26-12:49:47.899 6ac Generated table #8142@1: 46642 keys, 2214369 bytes
+2026/06/26-12:49:47.990 6ac Generated table #8143@1: 28249 keys, 2175972 bytes
+2026/06/26-12:49:48.028 6ac Generated table #8144@1: 915 keys, 2135288 bytes
+2026/06/26-12:49:48.113 6ac Generated table #8145@1: 1536 keys, 2150531 bytes
+2026/06/26-12:49:48.157 6ac Generated table #8146@1: 1654 keys, 2149719 bytes
+2026/06/26-12:49:48.163 6ac Generated table #8147@1: 7 keys, 47879 bytes
+2026/06/26-12:49:48.163 6ac Compacted 1@1 + 9@2 files => 19789831 bytes
+2026/06/26-12:49:48.164 6ac compacted to: files[ 0 2 29 0 0 0 0 ]
+2026/06/26-12:49:48.165 6ac Delete type=2 #8110
+2026/06/26-12:49:48.165 6ac Delete type=2 #8111
+2026/06/26-12:49:48.165 6ac Delete type=2 #8112
+2026/06/26-12:49:48.165 6ac Delete type=2 #8113
+2026/06/26-12:49:48.165 6ac Delete type=2 #8114
+2026/06/26-12:49:48.165 6ac Delete type=2 #8115
+2026/06/26-12:49:48.165 6ac Delete type=2 #8116
+2026/06/26-12:49:48.166 6ac Delete type=2 #8117
+2026/06/26-12:49:48.166 6ac Delete type=2 #8118
+2026/06/26-12:49:48.166 6ac Delete type=2 #8119
+2026/06/26-12:49:48.166 6ac Delete type=2 #8134
+2026/06/26-12:49:48.166 6ac Delete type=2 #8135
+2026/06/26-12:50:55.774 6ac Compacting 1@1 + 10@2 files
+2026/06/26-12:50:55.846 6ac Generated table #8148@1: 10319 keys, 2169081 bytes
+2026/06/26-12:50:56.028 6ac Generated table #8149@1: 25064 keys, 2275835 bytes
+2026/06/26-12:50:56.164 6ac Generated table #8150@1: 26785 keys, 2208845 bytes
+2026/06/26-12:50:56.214 6ac Generated table #8151@1: 6745 keys, 2139638 bytes
+2026/06/26-12:50:56.248 6ac Generated table #8152@1: 2616 keys, 2117405 bytes
+2026/06/26-12:50:56.352 6ac Generated table #8153@1: 7932 keys, 2147942 bytes
+2026/06/26-12:50:56.435 6ac Generated table #8154@1: 48896 keys, 2182339 bytes
+2026/06/26-12:50:56.602 6ac Generated table #8155@1: 101401 keys, 2253196 bytes
+2026/06/26-12:50:56.765 6ac Generated table #8156@1: 101574 keys, 2252731 bytes
+2026/06/26-12:50:56.910 6ac Generated table #8157@1: 72172 keys, 2220918 bytes
+2026/06/26-12:50:56.910 6ac Compacted 1@1 + 10@2 files => 21967930 bytes
+2026/06/26-12:50:56.911 6ac compacted to: files[ 0 1 29 0 0 0 0 ]
+2026/06/26-12:50:56.912 6ac Delete type=2 #8122
+2026/06/26-12:50:56.912 6ac Delete type=2 #8123
+2026/06/26-12:50:56.913 6ac Delete type=2 #8124
+2026/06/26-12:50:56.913 6ac Delete type=2 #8125
+2026/06/26-12:50:56.913 6ac Delete type=2 #8126
+2026/06/26-12:50:56.913 6ac Delete type=2 #8127
+2026/06/26-12:50:56.913 6ac Delete type=2 #8128
+2026/06/26-12:50:56.914 6ac Delete type=2 #8129
+2026/06/26-12:50:56.914 6ac Delete type=2 #8130
+2026/06/26-12:50:56.914 6ac Delete type=2 #8131
+2026/06/26-12:50:56.914 6ac Delete type=2 #8136
+2026/06/26-12:54:33.959 32a8 Level-0 table #8159: started
+2026/06/26-12:54:34.011 32a8 Level-0 table #8159: 1118729 bytes OK
+2026/06/26-12:54:34.014 32a8 Delete type=0 #8133
+2026/06/26-12:54:40.794 6ac Compacting 1@0 + 1@1 files
+2026/06/26-12:54:40.826 6ac Generated table #8160@0: 8568 keys, 165817 bytes
+2026/06/26-12:54:40.848 6ac Generated table #8161@0: 3195 keys, 230969 bytes
+2026/06/26-12:54:40.853 6ac Generated table #8162@0: 59 keys, 11162 bytes
+2026/06/26-12:54:40.853 6ac Compacted 1@0 + 1@1 files => 407948 bytes
+2026/06/26-12:54:40.854 6ac compacted to: files[ 0 3 29 0 0 0 0 ]

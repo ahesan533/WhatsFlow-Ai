@@ -1,62 +1,78 @@
 function Analytics() {
+
   return (
+
     <div>
 
       <h1 className="text-5xl font-bold">
-        Analytics 📊
+        Analytics
       </h1>
 
       <p className="text-zinc-400 mt-2">
-        WhatsApp business analytics overview
+        WhatsApp business performance overview
       </p>
 
-      <div className="mt-10 bg-[#111827] p-8 rounded-2xl border border-zinc-800">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
 
-        <h2 className="text-3xl font-bold mb-6">
-          Performance Overview
-        </h2>
+        <div className="bg-[#121A2B] p-6 rounded-3xl border border-zinc-800">
+          <h3 className="text-zinc-400">
+            Total Messages
+          </h3>
 
-        <div className="space-y-6">
+          <p className="text-4xl font-bold mt-3 text-green-400">
+            0
+          </p>
+        </div>
 
-          <div>
-            <div className="flex justify-between">
-              <span>Messages Sent</span>
-              <span>85%</span>
-            </div>
+        <div className="bg-[#121A2B] p-6 rounded-3xl border border-zinc-800">
+          <h3 className="text-zinc-400">
+            Total Contacts
+          </h3>
 
-            <div className="w-full h-4 bg-zinc-800 rounded-full mt-2">
-              <div className="w-[85%] h-4 bg-green-500 rounded-full"></div>
-            </div>
-          </div>
+          <p className="text-4xl font-bold mt-3 text-blue-400">
+            0
+          </p>
+        </div>
 
-          <div>
-            <div className="flex justify-between">
-              <span>AI Reply Rate</span>
-              <span>72%</span>
-            </div>
+        <div className="bg-[#121A2B] p-6 rounded-3xl border border-zinc-800">
+          <h3 className="text-zinc-400">
+            AI Replies Sent
+          </h3>
 
-            <div className="w-full h-4 bg-zinc-800 rounded-full mt-2">
-              <div className="w-[72%] h-4 bg-blue-500 rounded-full"></div>
-            </div>
-          </div>
+          <p className="text-4xl font-bold mt-3 text-purple-400">
+            0
+          </p>
+        </div>
 
-          <div>
-            <div className="flex justify-between">
-              <span>Client Engagement</span>
-              <span>91%</span>
-            </div>
+        <div className="bg-[#121A2B] p-6 rounded-3xl border border-zinc-800">
+          <h3 className="text-zinc-400">
+            Campaigns Sent
+          </h3>
 
-            <div className="w-full h-4 bg-zinc-800 rounded-full mt-2">
-              <div className="w-[91%] h-4 bg-pink-500 rounded-full"></div>
-            </div>
-          </div>
-
+          <p className="text-4xl font-bold mt-3 text-orange-400">
+            0
+          </p>
         </div>
 
       </div>
 
+      <div className="bg-[#121A2B] mt-8 p-8 rounded-3xl border border-zinc-800">
+
+        <h2 className="text-2xl font-bold mb-4">
+          Analytics Summary
+        </h2>
+
+        <p className="text-zinc-400">
+          Analytics data will appear here once messages,
+          campaigns and AI replies are used.
+        </p>
+
+      </div>
+
     </div>
+
   )
+
 }
 
 export default Analytics

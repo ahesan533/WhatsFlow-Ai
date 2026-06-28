@@ -1,205 +1,72 @@
 [
   {
-    "id": 1780746421214,
+    "id": 1782458385119,
     "phone": "192342225104933@lid",
     "name": "192342225104933@lid",
-    "lastMessage": "Owner",
-    "totalMessages": 28,
-    "createdAt": "2026-06-06T11:47:01.214Z",
-    "lastSeen": "2026-06-24T05:48:55.650Z",
+    "lastMessage": "Hi",
+    "totalMessages": 1,
     "status": "Interested",
-    "note": "hiiii",
-    "priority": "High",
-    "reminderDate": "2026-06-02",
     "timeline": [
       {
-        "action": "Status Changed To Interested",
-        "time": "2026-06-24T07:49:35.237Z"
-      },
-      {
-        "action": "Note Added",
-        "time": "2026-06-24T07:49:42.651Z"
-      },
-      {
-        "action": "Status Changed To Customer",
-        "time": "2026-06-24T08:08:13.863Z"
-      },
-      {
-        "action": "Note Added",
-        "time": "2026-06-24T08:08:35.170Z"
-      },
-      {
-        "action": "Note Added",
-        "time": "2026-06-24T08:09:00.113Z"
+        "action": "Lead Created",
+        "time": "2026-06-26T07:19:45.119Z"
       },
       {
         "action": "Status Changed To Interested",
-        "time": "2026-06-24T08:20:11.167Z"
+        "time": "2026-06-26T07:20:53.622Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-26T07:22:22.185Z"
+      },
+      {
+        "action": "Reminder Completed",
+        "time": "2026-06-26T07:24:23.910Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-26T07:24:57.514Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-26T07:25:06.835Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-26T07:25:29.146Z"
+      },
+      {
+        "action": "Note Added",
+        "time": "2026-06-26T07:25:34.620Z"
+      },
+      {
+        "action": "Reminder Snoozed",
+        "time": "2026-06-26T07:25:51.017Z"
       }
-    ]
+    ],
+    "note": "call tomorrow",
+    "priority": "High",
+    "reminderDate": "2026-06-27",
+    "createdAt": "2026-06-26T07:19:45.121Z",
+    "lastSeen": "2026-06-26T07:19:45.121Z"
   },
   {
-    "id": 1780746456430,
-    "phone": "94893577924797@lid",
-    "name": "94893577924797@lid",
-    "lastMessage": "",
-    "totalMessages": 1,
-    "createdAt": "2026-06-06T11:47:36.430Z",
-    "lastSeen": "2026-06-06T11:47:36.430Z",
-    "status": "Lost"
-  },
-  {
-    "id": 1780746456472,
-    "phone": "171158909542463@lid",
-    "name": "171158909542463@lid",
-    "lastMessage": "",
-    "totalMessages": 1,
-    "createdAt": "2026-06-06T11:47:36.472Z",
-    "lastSeen": "2026-06-06T11:47:36.472Z"
-  },
-  {
-    "id": 1780746456481,
-    "phone": "89245595226211@lid",
-    "name": "89245595226211@lid",
-    "lastMessage": "",
-    "totalMessages": 4,
-    "createdAt": "2026-06-06T11:47:36.481Z",
-    "lastSeen": "2026-06-24T05:40:55.819Z"
-  },
-  {
-    "id": 1780746456502,
-    "phone": "38414590152831@lid",
-    "name": "38414590152831@lid",
-    "lastMessage": "",
-    "totalMessages": 1,
-    "createdAt": "2026-06-06T11:47:36.502Z",
-    "lastSeen": "2026-06-06T11:47:36.502Z"
-  },
-  {
-    "id": 1780746475154,
-    "phone": "7877741772829@lid",
-    "name": "7877741772829@lid",
-    "lastMessage": "",
-    "totalMessages": 2,
-    "createdAt": "2026-06-06T11:47:55.154Z",
-    "lastSeen": "2026-06-09T11:06:55.547Z"
-  },
-  {
-    "id": 1781003176703,
-    "phone": "status@broadcast",
-    "name": "status@broadcast",
-    "lastMessage": "",
-    "totalMessages": 43,
-    "createdAt": "2026-06-09T11:06:16.703Z",
-    "lastSeen": "2026-06-09T11:08:35.530Z"
-  },
-  {
-    "id": 1781003212106,
-    "phone": "221800852131901@lid",
-    "name": "221800852131901@lid",
-    "lastMessage": "Ok",
-    "totalMessages": 9,
-    "createdAt": "2026-06-09T11:06:52.106Z",
-    "lastSeen": "2026-06-16T07:47:13.390Z"
-  },
-  {
-    "id": 1781588827065,
-    "phone": "215070487355453@lid",
-    "name": "215070487355453@lid",
-    "lastMessage": "",
-    "totalMessages": 3,
-    "createdAt": "2026-06-16T05:47:07.065Z",
-    "lastSeen": "2026-06-24T05:40:31.901Z"
-  },
-  {
-    "id": 1781588853637,
-    "phone": "36065310187762@lid",
-    "name": "36065310187762@lid",
-    "lastMessage": "",
-    "totalMessages": 2,
-    "createdAt": "2026-06-16T05:47:33.637Z",
-    "lastSeen": "2026-06-24T05:40:55.805Z"
-  },
-  {
-    "id": 1781596052343,
-    "phone": "91384304369759@lid",
-    "name": "91384304369759@lid",
-    "lastMessage": "",
-    "totalMessages": 2,
-    "createdAt": "2026-06-16T07:47:32.343Z",
-    "lastSeen": "2026-06-16T07:48:55.564Z"
-  },
-  {
-    "id": 1781596353547,
-    "phone": "120363149959528462@newsletter",
-    "name": "120363149959528462@newsletter",
-    "lastMessage": "*2️⃣ Must-win clashes ahead!*\n\nCheer on Team India as they march on, mission Semi-finals! 💙👏🙌🇮🇳\n\nIND 🆚 BAN 👉 THU, 25 JUN, 6 PM",
-    "totalMessages": 2,
-    "createdAt": "2026-06-16T07:52:33.547Z",
-    "lastSeen": "2026-06-24T07:50:05.810Z"
-  },
-  {
-    "id": 1782234949296,
-    "phone": "175342140571867@lid",
-    "name": "175342140571867@lid",
-    "lastMessage": "No issue",
-    "totalMessages": 2,
-    "createdAt": "2026-06-23T17:15:49.296Z",
-    "lastSeen": "2026-06-23T17:58:53.039Z"
-  },
-  {
-    "id": 1782238138605,
-    "phone": "258372918091994@lid",
-    "name": "258372918091994@lid",
-    "lastMessage": "",
-    "totalMessages": 1,
-    "status": "New Lead",
-    "createdAt": "2026-06-23T18:08:58.605Z",
-    "lastSeen": "2026-06-23T18:08:58.605Z"
-  },
-  {
-    "id": 1782285150846,
-    "phone": "120363182905476999@newsletter",
-    "name": "120363182905476999@newsletter",
-    "lastMessage": "⏰ *Reminder: The IDFC FIRST Bank MBA Scholarship Webinar starts today at 4:00 PM!*\n\nDon't miss this opportunity to learn everything about the scholarship, including eligibility, application process, required documents, and selection criteria.\n\n🎓 If you're a first-year MBA student and looking for financial support, this session is for you.\n\n*Webinar Details:*\n📅 Today | 24 June 2026\n⏰ 4:00 PM onwards\n💻 Zoom\n\n🔗 *Join Now:*\nhttps://us06web.zoom.us/j/86279244862?pwd=Zczvsdv3ZX61HdeJpIhXt84fTyTEUi.1\n\nSee you there!",
-    "totalMessages": 1,
-    "status": "New Lead",
-    "note": "",
-    "priority": "Normal",
-    "reminderDate": "",
-    "createdAt": "2026-06-24T07:12:30.846Z",
-    "lastSeen": "2026-06-24T07:12:30.846Z"
-  },
-  {
-    "id": 1782285155985,
-    "phone": "120363164587577661@newsletter",
-    "name": "120363164587577661@newsletter",
-    "lastMessage": "⏰ *Reminder: The IDFC FIRST Bank MBA Scholarship Webinar starts today at 4:00 PM!*\n\nDon't miss this opportunity to learn everything about the scholarship, including eligibility, application process, required documents, and selection criteria.\n\n🎓 If you're a first-year MBA student and looking for financial support, this session is for you.\n\n*Webinar Details:*\n📅 Today | 24 June 2026\n⏰ 4:00 PM onwards\n💻 Zoom\n\n🔗 *Join Now:*\nhttps://us06web.zoom.us/j/86279244862?pwd=Zczvsdv3ZX61HdeJpIhXt84fTyTEUi.1\n\nSee you there!",
-    "totalMessages": 1,
-    "status": "New Lead",
-    "note": "",
-    "priority": "Normal",
-    "reminderDate": "",
-    "createdAt": "2026-06-24T07:12:35.985Z",
-    "lastSeen": "2026-06-24T07:12:35.985Z"
-  },
-  {
-    "id": 1782288258318,
-    "phone": "120363184840886453@newsletter",
-    "name": "120363184840886453@newsletter",
-    "lastMessage": "She struck at close to 1️⃣5️⃣0️⃣ with the bat. 💥\nShe bowled and ended with 2️⃣/9️⃣. 🤩\nShe stitched a valuable 1️⃣0️⃣0️⃣-run stand with Voll. ⚡️\nShe took home Player of the Match Award. 😮‍💨🔥\n\nIn-short, Ellyse Perry just did Ellyse Perry things last evening. 💪",
+    "id": 1782458654093,
+    "phone": "120363336178249167@newsletter",
+    "name": "120363336178249167@newsletter",
+    "lastMessage": "*🇮🇳 This Is Bigger Than AI. This Is About Transforming India. ❤️*\n\nEvery business we build can become an opportunity to change someone's life.\nTransform India With AI is a movement to help people build businesses while creating a positive impact on society by supporting those in need of education, shelter, food, and medical care.\n\n*WATCH HERE 👇🏻* \nhttps://www.facebook.com/share/r/14rpG8TTv7F/\n\n> Click the Secret Link below to access the tools & prompts to start your business with Ai 👇\n\n> *SECRET LINK :* https://drive.google.com/file/d/1HZ9gI61Jf5upwZFPod2WfmzPxm0X2hNU/view?usp=sharing\n\n*LIKE 👍🏼 | SHARE 🔁 | FOLLOW 🔔*",
     "totalMessages": 1,
     "status": "New Lead",
     "timeline": [
       {
         "action": "Lead Created",
-        "time": "2026-06-24T08:04:18.318Z"
+        "time": "2026-06-26T07:24:14.093Z"
       }
     ],
     "note": "",
     "priority": "Normal",
     "reminderDate": "",
-    "createdAt": "2026-06-24T08:04:18.320Z",
-    "lastSeen": "2026-06-24T08:04:18.320Z"
+    "createdAt": "2026-06-26T07:24:14.093Z",
+    "lastSeen": "2026-06-26T07:24:14.093Z"
   }
 ]
